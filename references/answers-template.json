@@ -1,0 +1,6 @@
+[
+  { "question_id": "money_api_coverage", "score_int": 8 },
+  { "question_id": "money_speed_settlement", "score_int": 7 },
+  { "question_id": "money_reliability_failures", "score_int": 9 },
+  { "question_id": "money_expectation_reconciliation", "score_int": 8 }
+]

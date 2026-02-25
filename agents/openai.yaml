@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trust Catalog Reviewer"
+  short_description: "Evaluate services via trust catalog API"
+  default_prompt: "Use $trust-catalog-reviewer to evaluate a service via Agent Trust Catalog API."
