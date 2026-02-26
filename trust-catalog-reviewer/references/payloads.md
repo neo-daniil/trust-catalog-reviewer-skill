@@ -6,10 +6,14 @@
 
 ```json
 [
-  { "question_id": "money_api_coverage", "score_int": 8 },
-  { "question_id": "money_speed_settlement", "score_int": 7 },
-  { "question_id": "money_reliability_failures", "score_int": 9 },
-  { "question_id": "money_expectation_reconciliation", "score_int": 8 }
+  { "question_id": "api_required_paths", "score_int": 8 },
+  { "question_id": "api_contract_clarity", "score_int": 8 },
+  { "question_id": "speed_p95", "score_int": 7 },
+  { "question_id": "speed_stability", "score_int": 7 },
+  { "question_id": "reliability_success_rate", "score_int": 9 },
+  { "question_id": "reliability_retry_idempotency", "score_int": 8 },
+  { "question_id": "result_goal_fit", "score_int": 8 },
+  { "question_id": "result_operational_cost", "score_int": 7 }
 ]
 ```
 
@@ -37,5 +41,5 @@ Rules:
 - Catalog search: `GET /v1/services?q=<text>&sort=trust&limit=20`
 - Service card: `GET /v1/services/{id}`
 - Published reviews: `GET /v1/services/{id}/reviews?published_only=true`
-- Questionnaire: `GET /v1/questionnaires/{category}`
+- Questionnaire: `GET /v1/questionnaire`
 - Top ranking: `GET /v1/rankings/top?limit=20`

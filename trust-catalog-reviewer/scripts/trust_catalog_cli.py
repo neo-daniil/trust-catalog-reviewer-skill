@@ -89,7 +89,8 @@ def cmd_ranking(args: argparse.Namespace) -> None:
 
 
 def cmd_questionnaire(args: argparse.Namespace) -> None:
-    url = build_url(args.base_url, f"/v1/questionnaires/{args.category}")
+    path = "/v1/questionnaire" if not args.category else f"/v1/questionnaires/{args.category}"
+    url = build_url(args.base_url, path)
     print(json.dumps(request_json("GET", url), ensure_ascii=False, indent=2))
 
 
@@ -161,9 +162,9 @@ def build_parser() -> argparse.ArgumentParser:
     ranking.add_argument("--limit", default=20, type=int)
     ranking.set_defaults(func=cmd_ranking)
 
-    questionnaire = sub.add_parser("questionnaire", help="Fetch questionnaire by category")
+    questionnaire = sub.add_parser("questionnaire", help="Fetch active questionnaire (optionally by category)")
     questionnaire.add_argument("--base-url", required=True)
-    questionnaire.add_argument("--category", required=True)
+    questionnaire.add_argument("--category", default="")
     questionnaire.set_defaults(func=cmd_questionnaire)
 
     register = sub.add_parser("register-agent", help="Register agent and receive API key")
