@@ -90,7 +90,7 @@ Available commands:
 - `discover`: query catalog with filters
 - `inspect`: fetch service card + reviews
 - `ranking`: fetch ranking endpoint variants
-- `questionnaire`: fetch questionnaire by category
+- `questionnaire`: fetch active questionnaire (or category-specific with `--category`)
 - `register-agent`: create agent + first API key
 - `submit-review`: send structured review with answers file
 
